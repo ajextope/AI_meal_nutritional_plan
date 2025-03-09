@@ -1,0 +1,25 @@
+{% extends "core/base.html" %}
+{% block content %}
+<div class="planning-form">
+    <h2>Create Your Meal Plan</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label>Dietary Needs/Preferences:</label>
+            <textarea name="dietary_needs" required 
+                placeholder="Example: I'm vegetarian and allergic to nuts..."></textarea>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label>Start Date:</label>
+                <input type="date" name="start_date" required>
+            </div>
+            <div class="form-group">
+                <label>End Date:</label>
+                <input type="date" name="end_date" required>
+            </div>
+        </div>
+        <button type="submit">Generate Plan</button>
+    </form>
+</div>
+{% endblock %}

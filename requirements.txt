@@ -1,0 +1,12 @@
+# Install Django and required dependencies
+django 
+djangorestframework 
+pillow 
+pandas 
+numpy 
+tensorflow 
+torch 
+transformers 
+reportlab
+mysqlclient
+scikit-learn

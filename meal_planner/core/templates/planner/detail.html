@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="plan-detail">
+    <h2>Your Meal Plan {{ plan.start_date }} to {{ plan.end_date }}</h2>
+    
+    <div class="nutrition-summary">
+        <h3>Daily Averages:</h3>
+        <p>Calories: {{ nutrition.Calories (kcal) }}</p>
+        <p>Protein: {{ nutrition.Protein (g) }}g</p>
+    </div>
+
+    <div class="download-section">
+        <a href="{{ plan.pdf.url }}" class="btn">Download PDF</a>
+    </div>
+
+    <div class="shopping-list">
+        <h3>Shopping List:</h3>
+        <ul>
+            {% for item in plan.shopping_list.items %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}
