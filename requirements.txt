@@ -10,3 +10,5 @@ transformers
 reportlab
 mysqlclient
 scikit-learn
+ipykernel
+torchvision
